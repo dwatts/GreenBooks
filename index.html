@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mapping the Green Book</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css"/>
+  
+
+</head>
+  <body>
+
+    <div id="map">
+      <div id="left" class="sidebar flex-center left collapsed">
+        <div class="sidebar-content rounded-rect flex-center">
+                <div id="title">Mapping the 1949 Negro Motorist Green Book</div>
+                <hr class="titleLine">
+                <div class="switchBox">
+                  <label class="switch">
+                    <input type="checkbox" id="layerButton" checked>
+                    <span class="slider"></span>
+                  </label>
+                  <div class="switchText">Toggle State Data [ ON ]</div>
+                </div>
+                
+
+                <div class="legTitle">Green Book Site Categories</div>
+                <div class="legendContainer">            
+                  <ol class="htcleg">
+                    <li class='legend2'>Eating & Drinking</li>
+                    <li class='legend2'>Entertainment</li>
+                    <li class='legend2'>Lodging</li>
+                    <li class='legend2'>Retail Businesses</li>
+                    <li class='legend2'>Services</li>
+                    <li class='legend2'>Transportation</li>   
+                  </ol>
+                </div>
+              </div>
+            <div class="geoTitle">Find a Place</div>
+            <div id="geocoder" class="geocoder"></div>
+
+            <div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')">
+              <i class="fas fa-caret-square-right"></i>
+            </div>
+
+          </div>
+      </div>
+    </div>
+    
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
