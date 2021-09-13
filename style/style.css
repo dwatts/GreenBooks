@@ -10,24 +10,151 @@ body {
   width: 100%; 
 }
 
+#titleBar {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 52px;
+  opacity: 0.9;
+  z-index: 1011 !important;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 30%) !important;
+}
+
+#titleHolder {
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+}
+
 #title {
-  position: absolute;
-  top: 20px;
-  z-index: 2;
-  font-size: 2.3em;
-  line-height: 1.05em;
-  text-align: left;
   font-family: 'Overpass', sans-serif;
-  font-weight: 900;
-  width: 92%;
+  font-weight: 700 !important;
+  font-size: 30px !important;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#subTitle {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300 !important;
+  font-size: 28px !important;
+}
+
+#helpHolder {
+  position: absolute;
+  right: 15px;
+  z-index: 3;
+}
+
+.helpButton {
+  padding: 4px;
+  border-radius: 50%;
+  background-color: #FF7F00;
+  text-align: center;
+  text-decoration: none;
+  border: 0px;
+  cursor: pointer;
+}
+
+.fa-info-circle {
+  font-size: 30px;
+  color: white;
+}
+
+.fa-info-circle:hover {
   color: #404040;
 }
 
-.titleLine {
+/* Menu Code */
+
+#menu {
   position: absolute;
-  top: 75px;
-  width: 92%;
+  padding: 25px;
+  width: 25em;
+  height: 12em;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.9);
+  bottom: 40px;
+  left: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 50px -25px black;
 }
+
+/* Info Panel */
+
+.infopanel  {
+  width: 31.2em;
+  position: fixed;
+  z-index: 1;
+  height: 75%;
+  top: 120px;
+  right: -31.2em;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  box-shadow: 0 0 50px -25px black;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.infoPara {
+  padding: 15px;
+}
+
+.infoImg {
+  width: 100%;
+  height: auto;
+}
+
+.infoExpand {
+  right: 0;
+}
+
+.infopanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.infopanel a:hover {
+  color: #f1f1f1;
+}
+
+.infopanel .closebtn {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 36px;
+}
+
+/* custom scrollbar */
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+/* Popup Styling */
 
 .mapboxgl-popup-content {
   width: 300px;
@@ -40,29 +167,12 @@ body {
   font-size: 30px;
 }
 
-/*.mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
-.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
-.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
-    border-bottom-color: #000;
-    }
-.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
-.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
-.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
-    border-top-color: #000;
-    }
-.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
-    border-right-color: #000;
-    }
-.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
-    border-left-color: #000;
-    }*/
-
 h1 {
   margin-top: 6px;
   margin-bottom: 10px;
   font-family: 'Overpass', sans-serif;
   font-weight: 900;
-  font-size: 30px
+  font-size: 25px
 }
 
 h2 {
@@ -92,21 +202,28 @@ h3 {
 
 /* Geocoder Code */
 
-.geoTitle {
+#geocodeBox {
+  width: 30em;
+  display: flex;
+  align-content: center;
   position: absolute;
-  left: 23px;
-  top: 265px;
+  right: 15px;
+  top: 60px;
+}
+
+/*.geoTitle {
   color: #404040 !important;
   font-family: 'Overpass', sans-serif !important;
   font-weight: 700;
-  font-size: 1.25em;
-}
+  font-size: 20px;
+  position: relative;
+  z-index: 0;
+}*/
 
 .geocoder {
-  width: 87%;
-  margin: 10px;
-  position: absolute;
-  top: 285px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .mapboxgl-ctrl-geocoder {
@@ -118,24 +235,21 @@ h3 {
   padding: 7px 35px 4px 35px;
 }
 
-
-
 /* Toggle Switch Code */
 
 .switchBox {
-  width: 92%;
+  width: 100%;
   display: flex;
   align-content: center;
-  position: absolute;
-  top: 100px;
+  padding-top: 10px;
 }
 
 .switchText {
   font-family: 'Overpass', sans-serif;
   font-size: 1.25em;
-  font-weight: 700;
+  font-weight: 900;
   padding: 3px;
-  margin-left: 7px;
+  margin-left: 12px;
   color: #404040;
 }
 
@@ -147,6 +261,7 @@ h3 {
   display: inline-block;
   width: 36px;
   height: 22px;
+  border-radius: 4px !important;
 }
 
 .switch input {
@@ -165,6 +280,7 @@ h3 {
   background-color: #404040;
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 4px !important;
 }
 
 .slider:before {
@@ -177,6 +293,7 @@ h3 {
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 2px;
 }
 
 input:checked + .slider {
@@ -196,9 +313,6 @@ input:checked + .slider:before {
 /* Legend Div Styling */
 
 .legTitle {
-  position: absolute;
-  left: 14px;
-  top: 140px;
   color: #404040;
   font-family: 'Overpass', sans-serif;
   font-weight: 700;
@@ -206,19 +320,18 @@ input:checked + .slider:before {
 }
 
 .legendContainer {
-  position: absolute;
   display: flex;
   justify-content: space-between;
-  margin-top: 8px;
-  width: 92%;
-  top: 160px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 ol.htcleg {
   list-style: none;
   padding: 0px;
   columns: 2;
-  column-gap: 2px;
+  column-gap: 20px;
   margin: 0px;    
 }
 
@@ -240,8 +353,8 @@ li.legend2:before {
   margin-left: -20px;
   margin-top: 0px;    
   text-align: center;
-  height: 11px;
-  width: 11px;
+  height: 14px;
+  width: 14px;
   border-radius: 50%;
 }
 
@@ -281,67 +394,6 @@ li.legend2:nth-child(6):before {
   margin-right: 10px;   
 }
 
-/* Sidebar Info */
-
-.fa-caret-square-right {
-  font-size: 26px;
-  /*color: #404040;*/
-}
-
-.rounded-rect {
-  background: white;
-  border-radius: 5px;
-  box-shadow: 0 0 50px -25px black;
-}
-
-.flex-center {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-center.left {
-  left: 0px;
-}
-
-.sidebar-content {
-  position: absolute;
-  width: 95%;
-  height: 95%;
-  color: rgba(128, 128, 128, 0.3) !important;
-}
-
-.sidebar-toggle {
-  position: absolute;
-  width: 34px;
-  height: 34px;
-  overflow: visible;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #404040;
-}
-
-.sidebar-toggle.left {
-  right: -2.8em;
-}
-
-.sidebar-toggle:hover {
-  color: #ff7f00;
-  cursor: pointer;
-}
-
-.sidebar {
-  transition: transform 1s;
-  z-index: 1;
-  width: 370px;
-  height: 360px;
-}
-
-.left.collapsed {
-  transform: translateX(-365px);
-}
 
 /****Responsive Code****/
 

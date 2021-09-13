@@ -19,23 +19,6 @@ const map = new mapboxgl.Map({
 
 // Sidebar Code
 
-function toggleSidebar(id) {
-  const elem = document.getElementById(id);
-
-  const collapsed = elem.classList.toggle('collapsed');
-  const padding = {};
-
-  padding[id] = collapsed ? 0 : 300; 
-
-  map.easeTo({
-      padding: padding,
-      duration: 1000 
-  });
-}
-
-map.on('load', () => {
-    toggleSidebar('left');
-});
 
 // Geocoder Code
 
@@ -43,7 +26,8 @@ const geocoder = new MapboxGeocoder({
   accessToken: mapboxgl.accessToken,
   marker: false,
   countries: 'US',
-  mapboxgl: mapboxgl  
+  mapboxgl: mapboxgl,
+  placeholder: 'Find an Address or Place'
 });
 
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
@@ -466,7 +450,7 @@ map.addLayer({
             //label: "Business Type",
             data: [eatdrink, entertain, lodging, retail, services, transport],
             //stack: "Stack 0",    
-            backgroundColor: ["rgba(35,31,32,0.8)", "rgba(35,31,32,0.8)", "rgba(35,31,32,0.8)", "rgba(35,31,32,0.8)", "rgba(35,31,32,0.8)", "rgba(35,31,32,0.8)"],
+            backgroundColor: ["rgba(228, 26, 28,0.8)", "rgba(55, 126, 184,0.8)", "rgba(77, 175, 74,0.8)", "rgba(152, 78, 163,0.8)", "rgba(255, 127, 0,0.8)", "rgba(255, 255, 51,0.8)"],
             borderColor: "#404040",
             borderWidth: .5,
             hoverBorderWidth: 1
@@ -583,3 +567,10 @@ map.addLayer({
 
 
 });
+
+// Info Panel Code 
+
+function toggleInfo() {
+  var element = document.getElementById("myInfopanel");
+  element.classList.toggle("infoExpand");
+}
