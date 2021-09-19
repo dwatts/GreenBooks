@@ -574,3 +574,8 @@ function toggleInfo() {
   var element = document.getElementById("myInfopanel");
   element.classList.toggle("infoExpand");
 }
+
+function toggleMenu() {
+  var elementMenu = document.getElementById("menuPanel");
+  elementMenu.classList.toggle("menuExpand");
+}

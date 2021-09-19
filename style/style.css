@@ -32,16 +32,16 @@ body {
 
 #title {
   font-family: 'Overpass', sans-serif;
-  font-weight: 700 !important;
-  font-size: 30px !important;
+  font-weight: 700;
+  font-size: 2.6em;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 #subTitle {
   font-family: 'Overpass', sans-serif;
-  font-weight: 300 !important;
-  font-size: 28px !important;
+  font-weight: 300;
+  font-size: 2.1em;
 }
 
 #helpHolder {
@@ -109,11 +109,15 @@ body {
   height: auto;
 }
 
+.infoImg:hover {
+  opacity: 0.9;
+}
+
 .infoExpand {
   right: 0;
 }
 
-.infopanel a {
+/*.infopanel a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -124,7 +128,7 @@ body {
 
 .infopanel a:hover {
   color: #f1f1f1;
-}
+}*/
 
 .infopanel .closebtn {
   position: absolute;
@@ -394,39 +398,150 @@ li.legend2:nth-child(6):before {
   margin-right: 10px;   
 }
 
+/* Footer */
+
+#footerBar {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  opacity: 1;
+  z-index: 5 !important;
+  display: none;
+  align-items: center;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 30%) !important;
+}
+
+.menuPanel  {
+  width: 100%;
+  position: fixed;
+  padding: 20px;
+  z-index: 4;
+  height: 180px;
+  bottom: -180px;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  box-shadow: 0 0 50px -25px black;
+  border-radius: 5px 0px 0px 5px;
+  display: none;
+}
+
+.menuExpand {
+  bottom: 0;
+}
+
+/* Menu Toggle */
+
+#toggleBox {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5px;
+}
+
+#toggle {
+  display: none;
+}
+
+.toggle {
+   width: 33px;
+   height: 33px; 
+   cursor: pointer;
+}
+
+.toggle > span{
+    display: block;
+    top: 9.5px;
+    left: 7px;
+    width: 19px;
+    height: 2px;
+    margin-bottom: 4px;
+    position: relative;
+    background: #404040;
+    border-radius: 3px;
+    transform-origin: center;  
+    transition: transform .5s;
+}
+
+input#toggle ~ .toggle > span{
+  transform: translateY(0px) rotate(0deg);
+}
+
+input#toggle ~ .toggle > span:nth-child(2){
+    opacity: 1;
+}
+
+input#toggle ~ .toggle > span:nth-child(3){
+    transform: translateY(0px) rotate(0deg);
+}
+
+input#toggle:checked ~ .toggle > span{
+  transform: translateY(6px) rotate(-45deg);
+}
+
+input#toggle:checked ~ .toggle > span:nth-child(2){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+input#toggle:checked ~ .toggle > span:nth-child(3){
+    transform: translateY(-6px) rotate(45deg);
+}
+
+.toggle {
+  display: inline-block;
+}
+
 
 /****Responsive Code****/
 
 @media (max-width: 580px) {
-  .sidebar {
-    width: 91%;
-    height: 310px;
-  }
 
-  .sidebar-toggle {
-    width: 31px;
-    height: 31px;
-  }
-
-  .sidebar-toggle.left {
-    right: -2.35em;
-  }
-
-  .fa-caret-square-right {
-    font-size: 23px;
-    /*color: #404040;*/
-  }
-
-  .left.collapsed {
-    transform: translateX(-98%);
+  #titleBar {
+    height: 45px;
   }
 
   #title {
-    font-size: 2em;
+    font-size: 1.35em;
+  }
+
+  #subTitle {
+    display: none;
+  }
+
+  .infopanel  {
+    width: calc(100% - 15px);
+    position: fixed;
+    z-index: 10;
+    top: 60px;
+    height: calc(100% - 140px);
+    background-color: rgba(255, 255, 255, 1);
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 0 0 50px -25px black;
+    border-radius: 5px 0px 0px 5px;
   }
 
   .switchBox {
     top: 93px;
+  }
+
+  .fa-info-circle {
+    font-size: 22px;
+  }
+
+  #geocodeBox {
+    width: 100%;
+    right: 0px;
+    justify-content: center;
+  }
+
+  #geocoder {
+    width: 92%;
   }
 
   .legTitle {
@@ -442,11 +557,23 @@ li.legend2:nth-child(6):before {
   }
 
   .geocoder {
-    top: 242px;
+    padding-top: 0px;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .menuPanel {
+    display: block;
+  }
+
+  #footerBar {
+    display: flex;
   }
 
   .mapboxgl-ctrl-geocoder--input {
-    font-size: 0.9em;
+    font-size: 0.8em;
     height: 35px;
   }
 
@@ -461,6 +588,15 @@ li.legend2:nth-child(6):before {
 
   li.legend2 {
     margin-bottom: 0px;
+  }
+
+  .mapboxgl-ctrl-attrib.mapboxgl-compact {
+    display: none;
+  }
+
+  .mapboxgl-ctrl-bottom-left .mapboxgl-ctrl {
+    margin: 0 0 60px 15px;
+    z-index: 1;
   }
   
 }
