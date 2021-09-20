@@ -15,6 +15,14 @@ const map = new mapboxgl.Map({
   maxBounds: bounds 
 });
 
+var loadZoom = window.matchMedia( "(min-width: 580px)" );
+
+if (loadZoom.matches){
+    map.setZoom(4); //set map zoom level for desktop size
+} else {
+    map.setZoom(2.5); //set map zoom level for mobile size
+};
+
 //map.addControl(new mapboxgl.NavigationControl(), 'bottom-left');
 
 // Sidebar Code
