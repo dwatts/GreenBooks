@@ -419,13 +419,13 @@ li.legend2:nth-child(6):before {
   position: fixed;
   padding: 20px;
   z-index: 4;
-  height: 180px;
+  height: 170px;
   bottom: -180px;
   background-color: rgba(255, 255, 255, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
   box-shadow: 0 0 50px -25px black;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 0px;
   display: none;
 }
 
@@ -458,11 +458,11 @@ li.legend2:nth-child(6):before {
     top: 9.5px;
     left: 7px;
     width: 19px;
-    height: 2px;
+    height: 3px;
     margin-bottom: 4px;
     position: relative;
     background: #404040;
-    border-radius: 3px;
+    border-radius: 10px;
     transform-origin: center;  
     transition: transform .5s;
 }
@@ -489,7 +489,7 @@ input#toggle:checked ~ .toggle > span:nth-child(2){
 }
 
 input#toggle:checked ~ .toggle > span:nth-child(3){
-    transform: translateY(-6px) rotate(45deg);
+    transform: translateY(-8px) rotate(45deg);
 }
 
 .toggle {
@@ -546,6 +546,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
 
   .switchBox {
     top: 93px;
+    padding-top: 0px;
   }
 
   .fa-info-circle {
@@ -570,6 +571,35 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     top: 142px;
   }
 
+  li.legend2 {
+    margin-bottom: 2px;
+    padding-left: 30px;
+  }
+
+  li.legend2:nth-child(1):before {
+    margin-right: 15px;    
+  }
+  
+  li.legend2:nth-child(2):before {
+    margin-right: 15px;    
+  }
+  
+  li.legend2:nth-child(3):before {
+    margin-right: 15px;    
+  }
+  
+  li.legend2:nth-child(4):before {
+    margin-right: 15px;   
+  }
+  
+  li.legend2:nth-child(5):before {
+    margin-right: 15px;   
+  }
+  
+  li.legend2:nth-child(6):before {
+    margin-right: 15px;   
+  }
+
   .geoTitle {
     top: 228px;
   }
@@ -584,6 +614,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
 
   .menuPanel {
     display: block;
+    width: 90%;
   }
 
   #footerBar {
@@ -591,11 +622,11 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   }
 
   .mapboxgl-popup-content {
-    width: 250px;
+    width: 260px;
   }
 
   .mapboxgl-popup-close-button {
-    font-size: 28px;
+    font-size: 25px;
   }
 
   .mapboxgl-ctrl-geocoder--input {
@@ -610,10 +641,6 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
 
   .mapboxgl-ctrl-geocoder--icon-close {
     margin-top: 2px;
-  }
-
-  li.legend2 {
-    margin-bottom: 0px;
   }
 
   .mapboxgl-ctrl-attrib.mapboxgl-compact {
