@@ -49,7 +49,7 @@ map.on('load', () => {
     'maxzoom': 14
   });
 
-  map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1 });
+  map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
 
   //3d Buildings Code//
   const layers = map.getStyle().layers;
@@ -556,7 +556,7 @@ map.addLayer({
   });
 
 
-  // States Layer Toggle
+  // States Layer Toggle Full Screen
 
   const button = document.getElementById("layerButton");
 
@@ -564,15 +564,31 @@ map.addLayer({
       if (map.getLayoutProperty('greenbook-states', 'visibility') === 'none') {
         map.setLayoutProperty('greenbook-states', 'visibility', 'visible');
         map.setLayoutProperty('state-borders', 'visibility', 'visible');
-        $(".switchText").html("Toggle State Data [ ON ]");
+        $(".switchText").html("Toggle State \\ City Data [ ON ]");
       } else {
         
         map.setLayoutProperty('greenbook-states', 'visibility', 'none');
         map.setLayoutProperty('state-borders', 'visibility', 'none');
-        $(".switchText").html("Toggle State Data [ OFF ]");
+        $(".switchText").html("Toggle State \\ City Data [ OFF ]");
       }
   });
 
+  // States Layer Toggle Mobile
+
+  const buttonTwo = document.getElementById("layerButtonTwo");
+
+  buttonTwo.addEventListener("click", function() {
+      if (map.getLayoutProperty('greenbook-states', 'visibility') === 'none') {
+        map.setLayoutProperty('greenbook-states', 'visibility', 'visible');
+        map.setLayoutProperty('state-borders', 'visibility', 'visible');
+        $(".switchText").html("Toggle State \\ City Data [ ON ]");
+      } else {
+        
+        map.setLayoutProperty('greenbook-states', 'visibility', 'none');
+        map.setLayoutProperty('state-borders', 'visibility', 'none');
+        $(".switchText").html("Toggle State \\ City Data [ OFF ]");
+      }
+  });
 
 });
 
@@ -580,10 +596,15 @@ map.addLayer({
 
 function toggleInfo() {
   var element = document.getElementById("myInfopanel");
+  var elementMenu = document.getElementById("menuPanel");
   element.classList.toggle("infoExpand");
+  elementMenu.classList.remove("menuExpand");
+  document.getElementById("toggle").checked = false;
 }
 
 function toggleMenu() {
   var elementMenu = document.getElementById("menuPanel");
+  var element = document.getElementById("myInfopanel");
   elementMenu.classList.toggle("menuExpand");
+  element.classList.remove("infoExpand");
 }
