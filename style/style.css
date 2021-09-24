@@ -176,7 +176,7 @@ h1 {
   margin-bottom: 10px;
   font-family: 'Overpass', sans-serif;
   font-weight: 900;
-  font-size: 25px
+  font-size: 20px;
 }
 
 h2 {
@@ -184,7 +184,7 @@ h2 {
   margin-top: 8px;
   font-family: 'Overpass', sans-serif;
   font-weight: 700;
-  font-size: 20px
+  font-size: 17px;
 }
 
 h3 {
@@ -192,7 +192,15 @@ h3 {
   margin-top: 0px;
   font-family: 'Overpass', sans-serif;
   font-weight: 200;
-  font-size: 15px
+  font-size: 15px;
+}
+
+h4 {
+  margin-bottom: 3px;
+  margin-top: 3px;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
 }
 
 .chart {
@@ -509,10 +517,6 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     font-size: 1.35em;
   }
 
-  #subTitle {
-    display: none;
-  }
-
   h1 {
     margin-top: 6px;
     margin-bottom: 6px;
@@ -661,4 +665,57 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     height: 175px;
   }
 
+}
+
+@media (max-width: 1200px) {
+  #subTitle {
+    display: none;
+  }
+}
+
+@media (max-height: 500px) {
+  #titleBar {
+    height: 40px;
+  }
+
+  #title {
+    font-size: 1.4em;
+  }
+
+  .fa-info-circle {
+    font-size: 22px;
+  }
+
+  .geocoder {
+    padding-top: 0px;
+  }
+
+  #footerBar {
+    display: flex;
+    height: 40px;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .menuPanel {
+    display: block;
+    width: 25em;
+    height: 180px;
+    border-radius: 0px 5px 0px 5px;
+  }
+
+  .infopanel  {
+    width: 380px;
+    position: fixed;
+    z-index: 10;
+    top: 60px;
+    height: calc(100% - 110px);
+    background-color: rgba(255, 255, 255, 1);
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 0 0 50px -25px black;
+    border-radius: 5px 0px 0px 5px;
+  }
 }

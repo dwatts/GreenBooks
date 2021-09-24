@@ -49,7 +49,7 @@ map.on('load', () => {
     'maxzoom': 14
   });
 
-  map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
+  map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 2 });
 
   //3d Buildings Code//
   const layers = map.getStyle().layers;
@@ -57,6 +57,11 @@ map.on('load', () => {
     (layer) => layer.type === 'symbol' && layer.layout['text-field']
   ).id;
   //End 3d Buildings//
+
+  map.addSource('usoutline', {
+    type: 'geojson',
+    data: 'https://dwatts.github.io/GEOJSON/US_Outline.geojson',
+  });
 
   map.addSource('gbstates', {
     type: 'geojson',
@@ -170,6 +175,17 @@ map.on('load', () => {
     'paint': {
       'line-color': '#000',
       'line-width': 0.5
+    }
+  });
+
+  map.addLayer({
+    'id': 'us-outline',
+    'type': 'line',
+    'source': 'usoutline',
+    'layout': {},
+    'paint': {
+      'line-color': '#000',
+      'line-width': 1.5
     }
   });
 
@@ -427,7 +443,14 @@ map.addLayer({
     }
 
     var feature = polygonFeatures[0];
-    const states = feature.properties.NAME;
+    const places = feature.properties.NAME;
+    const states = feature.properties.State_Nme;
+    const title = (
+      feature.properties.type == 'state' ? `State of ${states}` :
+      feature.properties.type != 'state' ? `${places}, ${states}` :
+      ''
+    );
+
     const total = feature.properties.gb_sites;
 
     const eatdrink = feature.properties.eat_drink;
@@ -439,7 +462,7 @@ map.addLayer({
 
     var popup = new mapboxgl.Popup()
         .setLngLat(map.unproject(e.point))
-        .setHTML(`<h1>${states}</h1><h3>Total number of Green Book businesses: <b>${total}</b></h3><h2>Businesses by Type</h2><hr><div class="chartHolder"><canvas class="chart"></canvas></div>`)
+        .setHTML(`<h1>${title}</h1><h3>Total number of Green Book businesses: <b>${total}</b></h3><h2>Businesses by Type</h2><hr><div class="chartHolder"><canvas class="chart"></canvas></div>`)
         .addTo(map);
 
     const projCanvas = popup.getElement().getElementsByClassName("chart")[0];
@@ -515,7 +538,7 @@ map.addLayer({
             top: -100,
           }
         }
-};
+    };
 
     Chart.Legend.prototype.afterFit = function() {
         this.height = this.height + 10;
