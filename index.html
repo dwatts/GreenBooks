@@ -15,26 +15,46 @@
 </head>
   <body>
 
+    <div class="splashContainer">
+      <div class="splash">
+        <button id="start">Start</button>
+        <button id="tour">Take a Tour</button>
+      </div>
+    </div>
+    
+    <div class="boxone arrow-bottom">
+      <button id="nextOne">Next</button>
+    </div>
+
+    <div class="boxtwo arrow-top">
+      <button id="close">Close</button>
+    </div>
+
     <div id="map">
       <div id="titleBar">
         <div id="titleHolder">
-          <div id="title">Mapping the Negro Motorist Green Book</div>
+          <div id="title">Mapping the Green Book</div>
           <div id="subTitle">An International Guide, 1949 Edition</div>
         </div>
         <div id="helpHolder">
           <button id="helpButton" class="helpButton" onclick="toggleInfo()">
             <i class="fas fa-info-circle"></i>
           </button>
+          <button id="infoButton" class="infoButton">
+            <i class="fas fa-question-circle"></i>
+          </button>
         </div>
       </div>
 
       <!--Info Panel-->
       <div id="myInfopanel" class="infopanel">
-        <div class="infoPara">
-          <h1>About the Green Books</h1>
-          <a href="https://digitalcollections.nypl.org/items/9dc3ff40-8df4-0132-fd57-58d385a7b928" target="_blank"><img class="infoImg" src="assets/1949Cover.PNG"></a>
-          <h4>1949 Green Book Cover</h4>
-          <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</h3>
+        <div class="infoLiner">
+          <div class="infoPara">
+            <h1>About the Green Books</h1>
+            <a href="https://digitalcollections.nypl.org/items/9dc3ff40-8df4-0132-fd57-58d385a7b928" target="_blank"><img class="infoImg" src="assets/1949Cover.PNG"></a>
+            <h4>1949 Green Book Cover</h4>
+            <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</h3>
+          </div>
         </div>
       </div>
 
@@ -45,8 +65,8 @@
 
       <!--Full Screen Menu-->
 
-      <div id="menu">
-        <div class="legTitle">Green Book Site Categories</div>
+      <div id="menu" class="menu">
+        <div class="legTitle">Site Categories</div>
         <div class="legendContainer">            
           <ol class="htcleg">
             <li class='legend2'>Eating & Drinking</li>
@@ -58,39 +78,12 @@
           </ol>
         </div>
 
+        <div class="legTitle">Layers</div>
         <div class="switchBox">
-          <label class="switch">
-            <input type="checkbox" id="layerButton" checked>
-            <span class="slider"></span>
-          </label>
-          <div class="switchText">Toggle State \ City Data [ ON ]</div>
+          <button id="layerButton" class="layerButton">STATES & PLACES</button>
         </div>
+        
       
-      </div>
-
-      <!--Mobile Menu-->
-
-      <div id="menuPanel" class="menuPanel">
-        <div class="legTitle">Green Book Site Categories</div>
-        <div class="legendContainer">            
-          <ol class="htcleg">
-            <li class='legend2'>Eating & Drinking</li>
-            <li class='legend2'>Entertainment</li>
-            <li class='legend2'>Lodging</li>
-            <li class='legend2'>Retail Businesses</li>
-            <li class='legend2'>Services</li>
-            <li class='legend2'>Transportation</li>   
-          </ol>
-        </div>
-
-        <div class="switchBox">
-          <label class="switch">
-            <input type="checkbox" id="layerButtonTwo" checked>
-            <span class="slider"></span>
-          </label>
-          <div class="switchText">Toggle State \ City Data [ ON ]</div>
-        </div>
-
       </div>
       
       <div id="footerBar">

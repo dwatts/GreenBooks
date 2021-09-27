@@ -7,6 +7,7 @@ const bounds = [
 
 const map = new mapboxgl.Map({
   container: 'map',
+  //style: 'mapbox://styles/daytchw/ckss67q672xht17n0cvr9vvgu',
   style: 'mapbox://styles/daytchw/ckss67q672xht17n0cvr9vvgu',
   center: [-96.82258199476341, 38.61088854842071],
   pitch: 45,
@@ -130,7 +131,7 @@ map.on('load', () => {
         'circle-radius': {
             'base': 4,
             'stops': [
-              [10, 4],
+              [10, 5],
               [17, 12],
             ]
         },
@@ -151,7 +152,7 @@ map.on('load', () => {
             '#ffff33',
             '#000'
         ],
-        'circle-stroke-width': 2,
+        'circle-stroke-width': 1,
         'circle-stroke-color': '#404040'
     }
   });
@@ -478,13 +479,11 @@ map.addLayer({
       ],        
       datasets:[
         {
-            //label: "Business Type",
-            data: [eatdrink, entertain, lodging, retail, services, transport],
-            //stack: "Stack 0",    
-            backgroundColor: ["rgba(228, 26, 28,0.8)", "rgba(55, 126, 184,0.8)", "rgba(77, 175, 74,0.8)", "rgba(152, 78, 163,0.8)", "rgba(255, 127, 0,0.8)", "rgba(255, 255, 51,0.8)"],
+            data: [eatdrink, entertain, lodging, retail, services, transport],    
+            backgroundColor: ["rgba(228, 26, 28, 0.6)", "rgba(55, 126, 184,0.6)", "rgba(77, 175, 74,0.6)", "rgba(152, 78, 163,0.6)", "rgba(255, 127, 0,0.6)", "rgba(255, 255, 51,0.6)"],
             borderColor: "#404040",
             borderWidth: .5,
-            hoverBorderWidth: 1
+            hoverBorderWidth: .5
         },
       ],
       };
@@ -587,31 +586,27 @@ map.addLayer({
       if (map.getLayoutProperty('greenbook-states', 'visibility') === 'none') {
         map.setLayoutProperty('greenbook-states', 'visibility', 'visible');
         map.setLayoutProperty('state-borders', 'visibility', 'visible');
-        $(".switchText").html("Toggle State \\ City Data [ ON ]");
+        $("#layerButton").toggleClass('layerButton-clicked'); 
       } else {
-        
         map.setLayoutProperty('greenbook-states', 'visibility', 'none');
         map.setLayoutProperty('state-borders', 'visibility', 'none');
-        $(".switchText").html("Toggle State \\ City Data [ OFF ]");
+        $("#layerButton").toggleClass('layerButton-clicked');
       }
   });
 
   // States Layer Toggle Mobile
 
-  const buttonTwo = document.getElementById("layerButtonTwo");
+ /* const buttonTwo = document.getElementById("layerButtonTwo");
 
   buttonTwo.addEventListener("click", function() {
       if (map.getLayoutProperty('greenbook-states', 'visibility') === 'none') {
         map.setLayoutProperty('greenbook-states', 'visibility', 'visible');
         map.setLayoutProperty('state-borders', 'visibility', 'visible');
-        $(".switchText").html("Toggle State \\ City Data [ ON ]");
       } else {
-        
         map.setLayoutProperty('greenbook-states', 'visibility', 'none');
         map.setLayoutProperty('state-borders', 'visibility', 'none');
-        $(".switchText").html("Toggle State \\ City Data [ OFF ]");
       }
-  });
+  });*/
 
 });
 
@@ -619,15 +614,72 @@ map.addLayer({
 
 function toggleInfo() {
   var element = document.getElementById("myInfopanel");
-  var elementMenu = document.getElementById("menuPanel");
+  var elementMenu = document.getElementById("menu");
   element.classList.toggle("infoExpand");
   elementMenu.classList.remove("menuExpand");
+  $("#helpButton").toggleClass('helpButton-clicked');
   document.getElementById("toggle").checked = false;
 }
 
+// Tour Start Button Code
+
+let condition = 0;
+$(document).ready(function(){
+  $("#infoButton").click(function(){
+    if (condition == 0) {
+      $(".boxone").fadeToggle(300);
+      $("#infoButton").toggleClass('infoButton-clicked');
+      condition = 1;
+    } else {
+      $(".boxone").fadeOut(300);
+      $(".boxtwo").fadeOut(300);
+      $("#infoButton").toggleClass('infoButton-clicked');
+      condition = 0;
+    }
+
+  });
+});
+
+// Toggle Menu on Mobile
+
 function toggleMenu() {
-  var elementMenu = document.getElementById("menuPanel");
+  var elementMenu = document.getElementById("menu");
   var element = document.getElementById("myInfopanel");
   elementMenu.classList.toggle("menuExpand");
   element.classList.remove("infoExpand");
 }
+
+// Splash Screen Code
+
+$(document).ready(function(){
+  $("#start").click(function(){
+    $(".splashContainer").fadeToggle(300);
+  });
+});
+
+
+$(document).ready(function(){
+  $("#tour").click(function(){
+    $("#infoButton").toggleClass('infoButton-clicked');
+    $(".splashContainer").fadeToggle(300);
+    $(".boxone").fadeToggle(300);
+    condition = 1;
+  });
+});
+
+$(document).ready(function(){
+  $("#nextOne").click(function(){
+    $(".boxone").fadeToggle(300);
+    $(".boxtwo").fadeToggle(300);
+  });
+});
+
+$(document).ready(function(){
+  $("#close").click(function(){
+    $(".boxtwo").fadeToggle(300);
+    $("#infoButton").toggleClass('infoButton-clicked');
+    condition = 0;
+  });
+});
+
+
