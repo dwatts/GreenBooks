@@ -55,6 +55,7 @@ body {
   border-radius: 50%;
   background-color: #404040;
   text-align: center;
+  margin: auto;
   text-decoration: none;
   border: 0px;
   cursor: pointer;
@@ -79,6 +80,7 @@ body {
   border-radius: 50%;
   background-color: #404040;
   text-align: center;
+  margin: auto;
   text-decoration: none;
   border: 0px;
   cursor: pointer;
