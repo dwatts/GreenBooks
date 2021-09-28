@@ -60,6 +60,7 @@ body {
   background-color: #404040;
   text-decoration: none;
   border: 0px;
+  line-height: normal;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,6 +88,7 @@ body {
   text-align: center;
   text-decoration: none;
   border: 0px;
+  line-height: normal;
   display: flex;
   justify-content: space-between;
   align-items: center;
