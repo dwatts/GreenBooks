@@ -51,13 +51,13 @@ body {
 }
 
 .helpButton {
-  padding: 3px;
+  /*padding: 3px;*/
   border-radius: 50%;
   background-color: #404040;
-  text-align: center;
+  text-align: center !important;
   margin: auto;
   text-decoration: none;
-  border: 0px;
+  border: 3px;
   cursor: pointer;
 }
 
@@ -76,13 +76,13 @@ body {
 }
 
 .infoButton {
-  padding: 3px;
+  /*padding: 3px;*/
   border-radius: 50%;
   background-color: #404040;
-  text-align: center;
+  text-align: center !important;
   margin: auto;
   text-decoration: none;
-  border: 0px;
+  border: 3px;
   cursor: pointer;
 }
 
