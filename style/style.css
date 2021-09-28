@@ -58,10 +58,12 @@ body {
   padding: 3px;
   border-radius: 50%;
   background-color: #404040;
-  text-align: center;
   text-decoration: none;
   border: 0px;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 
 .helpButton-clicked {
@@ -75,6 +77,7 @@ body {
 
 .fa-info-circle {
   font-size: 30px;
+  color: white;
 }
 
 .infoButton {
@@ -84,7 +87,9 @@ body {
   text-align: center;
   text-decoration: none;
   border: 0px;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .infoButton-clicked {
@@ -812,10 +817,6 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
 
   #subTitle {
     font-size: 1.7em;
-  }
-
-  #helpHolder {
-    width: 60px;
   }
 
   .fa-info-circle {
