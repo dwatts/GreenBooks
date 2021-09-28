@@ -51,15 +51,12 @@ body {
 }
 
 .helpButton {
-  padding: 3px;
+  padding: 4px;
   border-radius: 50%;
-  background-color: #404040;
-  text-align: center !important;
-  margin: auto;
+  background-color: #f0f0f0;
+  text-align: center;
   text-decoration: none;
-  border: 0;
-  cursor: pointer;
-  display: inline-block;
+  border: 0px;
 }
 
 .helpButton-clicked {
@@ -72,8 +69,7 @@ body {
 }
 
 .fa-info-circle {
-  font-size: 30px;
-  color: white;
+  font-size: 24px;
 }
 
 .infoButton {
