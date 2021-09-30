@@ -881,7 +881,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   }
 
   #geocodeBox {
-    width: 21em !important;
+    width: 23em !important;
     justify-content: right !important;
     padding-right: 5px !important;
     position: absolute !important;
