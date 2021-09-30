@@ -46,12 +46,11 @@ body {
 
 #helpHolder {
   position: absolute;
-  right: 15px;
-  width: 78px;
-  z-index: 3;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  z-index: 4;
+  right: 15px;
+  width: 75px;
 }
 
 .helpButton {
@@ -60,11 +59,9 @@ body {
   background-color: #404040;
   text-decoration: none;
   border: 0px;
-  line-height: 1.6;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
+  justify-content: space-around;
+  cursor: pointer;
 }
 
 .helpButton-clicked {
@@ -88,10 +85,9 @@ body {
   text-align: center;
   text-decoration: none;
   border: 0px;
-  line-height: 1.6;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
 }
 
 .infoButton-clicked {
@@ -657,15 +653,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   }
 
   #helpHolder {
-    width: 55px;
-  }
-
-  .fa-info-circle {
-    font-size: 22px;
-  }
-
-  .fa-question-circle {
-    font-size: 22px;
+    width: 52px;
   }
 
   #geocodeBox {
@@ -820,13 +808,17 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   #subTitle {
     font-size: 1.7em;
   }
+  
+  #helpHolder {
+    width: 60px;
+  }
 
   .fa-info-circle {
-    font-size: 19px;
+    font-size: 22px;
   }
 
   .fa-question-circle {
-    font-size: 19px;
+    font-size: 22px;
   }
 }
 
