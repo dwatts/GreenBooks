@@ -854,12 +854,16 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     font-size: 12px
   }
 
+  #helpHolder {
+    width: 60px;
+  }
+
   .fa-info-circle {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .fa-question-circle {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .boxone {
@@ -878,7 +882,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
 
   #geocodeBox {
     width: 30em;
-    justify-content: right;
+    justify-content: right !important;
     padding-right: 5px;
   }
 
