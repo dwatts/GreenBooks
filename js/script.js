@@ -668,7 +668,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $("#nextOne").click(function(){
+  $("#next").click(function(){
     $(".boxone").fadeToggle(300);
     $(".boxtwo").fadeToggle(300);
   });
