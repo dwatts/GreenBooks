@@ -884,6 +884,9 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     width: 30em;
     justify-content: right !important;
     padding-right: 5px;
+    position: absolute;
+    right: 4px;
+    top: 50px;
   }
 
   .geocoder {
