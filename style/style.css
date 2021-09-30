@@ -881,13 +881,13 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   }
 
   #geocodeBox {
-    width: 30em;
+    width: 30em !important;
     justify-content: right !important;
-    padding-right: 5px;
-    position: absolute;
-    right: 4px;
-    top: 50px;
-    display: flex;
+    padding-right: 5px !important;
+    position: absolute !important;
+    right: 4px !important;
+    top: 50px !important;
+    display: flex !important;
   }
 
   .geocoder {
