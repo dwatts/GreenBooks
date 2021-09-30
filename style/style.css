@@ -881,7 +881,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   }
 
   #geocodeBox {
-    width: 30em !important;
+    width: 21em !important;
     justify-content: right !important;
     padding-right: 5px !important;
     position: absolute !important;
@@ -892,7 +892,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
 
   .geocoder {
     padding-top: 0px;
-    width: 80%;
+    width: 100%;
   }
 
   #footerBar {
