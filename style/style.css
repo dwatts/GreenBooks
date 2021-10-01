@@ -126,7 +126,7 @@ body {
   width: 100%;
   height: 25px;
   border-radius: 4px;
-  border: 1px solid rgba(60, 66, 59, 0.4);
+  border: 0px solid rgba(60, 66, 59, 0.4);
   cursor: pointer;
   font-family: 'Overpass', sans-serif;
   color: rgb(231, 231, 231) !important;
@@ -192,51 +192,51 @@ li.legend2:before {
   margin-left: -20px;
   margin-top: 0px;    
   text-align: center;
-  height: 14px;
-  width: 14px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
 }
 
 li.legend2:nth-child(1):before {
   background-color: #E41A1C;
-  border: 1px solid #404040;
+  border: 0px solid #404040;
   margin-right: 10px;    
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 li.legend2:nth-child(2):before {
   background-color: #377eb8;
-  border: 1px solid #404040;
+  border: 0px solid #404040;
   margin-right: 10px;   
-  opacity: 0.8; 
+  opacity: 0.9; 
 }
 
 li.legend2:nth-child(3):before {
   background-color: #4daf4a;
-  border: 1px solid #404040;
+  border: 0px solid #404040;
   margin-right: 10px; 
-  opacity: 0.8;   
+  opacity: 0.9;   
 }
 
 li.legend2:nth-child(4):before {
   background-color: #984ea3;
-  border: 1px solid #404040;   
+  border: 0px solid #404040;   
   margin-right: 10px;   
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 li.legend2:nth-child(5):before {
   background-color: #ff7f00;
-  border: 1px solid #404040;
+  border: px solid #404040;
   margin-right: 10px;  
-  opacity: 0.8; 
+  opacity: 0.9; 
 }
 
 li.legend2:nth-child(6):before {
   background-color: #ffff33;
-  border: 1px solid #404040;
+  border: 0px solid #404040;
   margin-right: 10px;   
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /****Info Panel****/
@@ -347,8 +347,8 @@ h4 {
   margin-bottom: 3px;
   margin-top: 3px;
   font-family: 'Overpass', sans-serif;
-  font-weight: 600;
-  font-size: 11px;
+  font-weight: 200;
+  font-size: 13px;
 }
 
 .chart {
@@ -509,7 +509,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
 .boxone {
   position: fixed;
   z-index: 6;
-  width: 300px;
+  width: 310px;
   height: 150px;
   background-color: rgba(255, 255, 255, 0.9);
   bottom: 350px;
@@ -536,7 +536,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   position: fixed;
   z-index: 6;
   width: 300px;
-  height: 150px;
+  height: 180px;
   background-color: rgba(255, 255, 255, 0.9);
   top: 130px;
   right: 15px;
@@ -567,7 +567,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   right: 10px;
   height: 25px;
   border-radius: 4px;
-  border: 1px solid rgba(60, 66, 59, 0.4);
+  border: 0px solid rgba(60, 66, 59, 0.4);
   cursor: pointer;
   font-family: 'Overpass', sans-serif;
   color: rgb(231, 231, 231) !important;
@@ -698,8 +698,8 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   }
 
   li.legend2:before {
-    height: 11px;
-    width: 11px;
+    height: 13px;
+    width: 13px;
   }
 
   li.legend2:nth-child(1):before {

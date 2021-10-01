@@ -482,8 +482,8 @@ map.addLayer({
             data: [eatdrink, entertain, lodging, retail, services, transport],    
             backgroundColor: ["rgba(228, 26, 28, 0.6)", "rgba(55, 126, 184,0.6)", "rgba(77, 175, 74,0.6)", "rgba(152, 78, 163,0.6)", "rgba(255, 127, 0,0.6)", "rgba(255, 255, 51,0.6)"],
             borderColor: "#404040",
-            borderWidth: .5,
-            hoverBorderWidth: .5
+            borderWidth: 0,
+            hoverBorderWidth: 0
         },
       ],
       };
@@ -647,6 +647,7 @@ function toggleMenu() {
   var element = document.getElementById("myInfopanel");
   elementMenu.classList.toggle("menuExpand");
   element.classList.remove("infoExpand");
+  $("#helpButton").removeClass('helpButton-clicked');
 }
 
 // Splash Screen Code
