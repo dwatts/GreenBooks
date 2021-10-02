@@ -898,6 +898,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     bottom: 65px;
     left: 10px;
     width: 250px;
+    height: 150px;
   }
 
   .boxone.arrow-bottom:after {
@@ -908,6 +909,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     top: 105px;
     right: 10px;
     width: 250px;
+    height: 160px;
   }
 
   #geocodeBox {
