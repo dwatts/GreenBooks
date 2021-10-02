@@ -665,13 +665,30 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     font-size: .9em;
   }
 
+  .splash {
+    width: 70%;
+    height: 35%;
+    padding: 10px;
+  }
+
   .textBox {
     font-size: .8em;
   }
 
-  .splash {
-    width: 70%;
-    height: 35%;
+  .startButton {
+    height: 22px;
+    font-size: .7em;
+    line-height: 23px;
+    right: 90px;
+    bottom: 10px;
+  }
+  
+  .tourButton {
+    height: 22px;
+    font-size: .7em;
+    line-height: 23px;
+    bottom: 10px;
+    right: 10px;
   }
 
   #titleBar {
@@ -844,22 +861,6 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     height: 22px;
     font-size: .7em;
     line-height: 23px;
-  }
-
-  .startButton {
-    height: 22px;
-    font-size: .7em;
-    line-height: 23px;
-    right: 85px;
-    bottom: 10px;
-  }
-  
-  .tourButton {
-    height: 22px;
-    font-size: .7em;
-    line-height: 23px;
-    bottom: 10px;
-    right: 10px;
   }
 
   .mapboxgl-popup-content {
