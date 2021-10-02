@@ -627,8 +627,11 @@ let condition = 0;
 $(document).ready(function(){
   $("#infoButton").click(function(){
     if (condition == 0) {
+      var element = document.getElementById("myInfopanel");
       $(".boxone").fadeToggle(300);
       $("#infoButton").toggleClass('infoButton-clicked');
+      element.classList.remove("infoExpand");
+      $("#helpButton").removeClass('helpButton-clicked');
       condition = 1;
     } else {
       $(".boxone").fadeOut(300);
@@ -636,7 +639,6 @@ $(document).ready(function(){
       $("#infoButton").toggleClass('infoButton-clicked');
       condition = 0;
     }
-
   });
 });
 
