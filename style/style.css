@@ -522,8 +522,6 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   height: 25px;
   display: flex;
   justify-content: end;
-
-
 }
 
 .startButton {
@@ -538,6 +536,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   font-weight: 700;
   background-color: rgba(156, 102, 102, 0.8);
   line-height: 23px;
+  padding: 1px 5px;
 }
 
 .startButton:hover {
@@ -555,6 +554,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   font-weight: 700;
   background-color: rgba(156, 102, 102, 0.8);
   line-height: 23px;
+  padding: 1px 5px;
 }
 
 .tourButton:hover {
