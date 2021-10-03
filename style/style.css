@@ -692,17 +692,11 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   .startButton {
     height: 22px;
     font-size: .7em;
-    line-height: 23px;
-    right: 90px;
-    bottom: 10px;
   }
   
   .tourButton {
     height: 22px;
     font-size: .7em;
-    line-height: 23px;
-    bottom: 10px;
-    right: 10px;
   }
 
   #titleBar {
