@@ -507,18 +507,17 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   font-size: 1.2em;
 }
 
-.textBox {
+.splashTextBox {
   font-family: 'Overpass', sans-serif;
   font-weight: 300;
   font-size: .9em;
   padding-top: 10px;
+  height: 80%;
 }
 
 .buttonHolder {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 70%;
+  position: relative;
+  width: 100%;
   height: 25px;
   display: flex;
   justify-content: end;
@@ -667,9 +666,6 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   }
 
   .buttonHolder {
-    bottom: 10px;
-    right: 10px;
-    width: 200px;
     height: 23px;
   }
 
