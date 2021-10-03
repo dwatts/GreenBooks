@@ -514,12 +514,21 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   padding-top: 10px;
 }
 
-.startButton {
+.buttonHolder {
   position: absolute;
-  right: 115px;
   bottom: 20px;
+  right: 20px;
+  width: 70%;
+  height: 25px;
+  display: flex;
+  justify-content: end;
+
+}
+
+.startButton {
   height: 25px;
   border-radius: 4px;
+  margin-right: 10px;
   border: 0px solid rgba(60, 66, 59, 0.4);
   cursor: pointer;
   font-family: 'Overpass', sans-serif;
@@ -535,9 +544,6 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
 }
 
 .tourButton {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
   height: 25px;
   border-radius: 4px;
   border: 0px solid rgba(60, 66, 59, 0.4);
@@ -673,6 +679,11 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
 
   .textBox {
     font-size: .8em;
+  }
+
+  .buttonHolder {
+    bottom: 10px;
+    right: 10px;
   }
 
   .startButton {
