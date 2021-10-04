@@ -133,7 +133,7 @@ body {
   font-size: 1.2em;
   font-weight: 700;
   background-color: rgba(156, 102, 102, 0.8);
-  line-height: 23px;
+  line-height: 26px;
 }
 
 .layerButton-clicked {
@@ -192,8 +192,8 @@ li.legend2:before {
   margin-left: -20px;
   margin-top: 0px;    
   text-align: center;
-  height: 14px;
-  width: 14px;
+  height: 12px;
+  width: 12px;
   border-radius: 50%;
 }
 
@@ -269,6 +269,7 @@ li.legend2:nth-child(6):before {
   width: 50%;
   height: auto;
   float: left;
+  margin-top: 5px;
   margin-right: 13px;
   margin-bottom: 5px;
   border-radius: 4px;
@@ -293,11 +294,11 @@ li.legend2:nth-child(6):before {
   display: flex;
 }
 
-/* Create two equal columns that sits next to each other */
 .column {
   flex: 50%;
   padding-right: 10px;
-  height: 475px; /* Should be removed. Only for demonstration */
+  padding-bottom: 25px;
+  height: 475px;
 }
 
 .catBull {
@@ -355,6 +356,11 @@ li.infoBull {
   color: #404040 !important;
   font-family: 'Overpass', sans-serif !important;
   font-weight: 300;   
+}
+
+.infoh3 {
+  padding: 5px 0px 15px 0px;
+  font-size: 1.2em;
 }
 
 /****custom scrollbar****/
@@ -426,6 +432,7 @@ h4 {
 hr {
   border-top: .4px solid #000;
   opacity: .2;
+  padding-bottom: 2px;
 }
 
 .chart {
@@ -636,7 +643,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   position: fixed;
   z-index: 6;
   width: 310px;
-  height: 150px;
+  height: 140px;
   background-color: rgba(255, 255, 255, 0.9);
   bottom: 350px;
   left: 15px;
@@ -662,7 +669,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   position: fixed;
   z-index: 6;
   width: 300px;
-  height: 180px;
+  height: 160px;
   background-color: rgba(255, 255, 255, 0.9);
   top: 130px;
   right: 15px;
@@ -814,6 +821,10 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     transition: 0.5s;
     box-shadow: 0 0 50px -25px black;
     border-radius: 5px 0px 0px 5px;
+  }
+
+  .column {
+    height: 440px;
   }
 
   .menu {
