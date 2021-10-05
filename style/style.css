@@ -610,7 +610,9 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   height: 25px;
   display: flex;
   justify-content: flex-end;
-  padding-top: 30px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
 
 #start {
@@ -825,6 +827,10 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
 
   .column {
     height: 440px;
+  }
+
+  .catBullShape {
+    margin-top: 5px;
   }
 
   .menu {
