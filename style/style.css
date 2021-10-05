@@ -269,9 +269,9 @@ li.legend2:nth-child(6):before {
   width: 50%;
   height: auto;
   float: left;
-  margin-top: 5px;
+  margin-top: 9px;
   margin-right: 13px;
-  margin-bottom: 5px;
+  margin-bottom: -1px;
   border-radius: 4px;
 }
 
@@ -1201,6 +1201,11 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     transition: 0.5s;
     box-shadow: 0 0 50px -25px black;
     border-radius: 5px 0px 0px 5px;
+  }
+
+  .infoh3 {
+    padding: 5px 0px 15px 0px;
+    font-size: 1em;
   }
 
   .mapboxgl-popup-close-button {
