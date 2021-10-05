@@ -306,6 +306,8 @@ li.legend2:nth-child(6):before {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .catBullShape {
@@ -350,7 +352,7 @@ ol.infoLeg {
 }
 
 li.infoBull {
-  padding-left: 7px;    
+  padding-left: 10px;    
   position: relative;
   font-size: 1em !important;
   color: #404040 !important;
