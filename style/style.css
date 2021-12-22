@@ -292,6 +292,7 @@ li.legend2:nth-child(6):before {
 
 .row {
   display: flex;
+  padding-bottom: 15px;
 }
 
 .column {
@@ -754,7 +755,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
 
   .splash {
     width: 19em;
-    height: 27em !important;
+    height: 21em !important;
     padding: 10px;
   }
 
@@ -943,7 +944,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     bottom: 75px;
     left: 15px;
     width: 250px;
-    height: 150px;
+    height: 120px;
   }
 
   .boxone.arrow-bottom:after {
@@ -954,7 +955,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     top: 120px;
     right: 15px;
     width: 250px;
-    height: 160px;
+    height: 130px;
   }
 
   .tutButton {
@@ -1088,7 +1089,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     bottom: 65px;
     left: 10px;
     width: 250px;
-    height: 150px;
+    height: 120px;
   }
 
   .boxone.arrow-bottom:after {
@@ -1099,7 +1100,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     top: 105px;
     right: 10px;
     width: 250px;
-    height: 160px;
+    height: 130px;
   }
 
   .tutButton {
@@ -1124,8 +1125,12 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   }
 
   .splash {
-    width: 50%;
-    height: 55%;
+    width: 60%;
+    height: 65%;
+  }
+
+  .splashTextBox {
+    font-size: .8em;
   }
 
   .startButton {
@@ -1188,6 +1193,10 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   li.legend2:before {
     height: 11px;
     width: 11px;
+  }
+
+  .row {
+    padding-bottom: 0px;
   }
 
   .infopanel  {
