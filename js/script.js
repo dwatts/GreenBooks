@@ -615,6 +615,12 @@ map.addLayer({
 function toggleInfo() {
   var element = document.getElementById("myInfopanel");
   var elementMenu = document.getElementById("menu");
+  //start test code
+  $(".boxone").fadeOut(300);
+  $(".boxtwo").fadeOut(300);
+  $("#infoButton").removeClass('infoButton-clicked');
+  condition = 0;
+  //end test code
   element.classList.toggle("infoExpand");
   elementMenu.classList.remove("menuExpand");
   $("#helpButton").toggleClass('helpButton-clicked');
@@ -649,6 +655,7 @@ function toggleMenu() {
   var element = document.getElementById("myInfopanel");
   elementMenu.classList.toggle("menuExpand");
   element.classList.remove("infoExpand");
+  condition = 0;
   $("#helpButton").removeClass('helpButton-clicked');
 }
 
