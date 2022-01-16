@@ -124,7 +124,7 @@ body {
 
 .layerButton {
   width: 100%;
-  height: 25px;
+  height: 1.9em;
   border-radius: 4px;
   border: 0px solid rgba(60, 66, 59, 0.4);
   cursor: pointer;
@@ -133,7 +133,10 @@ body {
   font-size: 1.2em;
   font-weight: 700;
   background-color: rgba(156, 102, 102, 0.8);
-  line-height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0px !important;
 }
 
 .layerButton-clicked {
@@ -623,7 +626,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
 }
 
 .splashButton {
-  height: 25px;
+  height: 2em;
   border-radius: 4px;
   border: 0px solid rgba(60, 66, 59, 0.4);
   cursor: pointer;
@@ -632,11 +635,10 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   font-size: .9em;
   font-weight: 700;
   background-color: rgba(156, 102, 102, 0.8);
-  margin: auto;
-  /*align-items: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  display: inline-flex;*/
-  padding: 1px 10px;
+  padding-bottom: 0px !important;
 }
 
 .splashButton:hover {
@@ -782,7 +784,6 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   .splashButton {
     height: 22px;
     font-size: .6em;
-    line-height: 22px;
   }
 
   #titleBar {
@@ -923,10 +924,9 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   }
 
   .layerButton {
-    height: 23px;
+    height: 1.9em;
     width: 100%;
     font-size: 1em;
-    line-height: 20px;
   }
 
   .geoTitle {
@@ -1096,7 +1096,6 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   
   .layerButton {
     font-size: 1em;
-    line-height: 26px;
   }
   
   /* Legend Div Styling */
