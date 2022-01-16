@@ -133,7 +133,7 @@ body {
   font-size: 1.2em;
   font-weight: 700;
   background-color: rgba(156, 102, 102, 0.8);
-  line-height: 26px;
+  line-height: 27px;
 }
 
 .layerButton-clicked {
@@ -632,9 +632,10 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   font-size: .9em;
   font-weight: 700;
   background-color: rgba(156, 102, 102, 0.8);
-  align-items: center;
+  margin: auto;
+  /*align-items: center;
   justify-content: center;
-  display: inline-flex;
+  display: inline-flex;*/
   padding: 1px 10px;
 }
 
@@ -1036,6 +1037,13 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
     font-size: 0.8em;
   }
 
+  .mapboxgl-popup-close-button {
+    font-size: 26px;
+    right: 5px;
+    top: 3px;
+    padding: 1px 5px;
+  }
+
   h1 {
     margin-top: 6px;
     margin-bottom: 2px;
@@ -1088,6 +1096,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   
   .layerButton {
     font-size: 1em;
+    line-height: 26px;
   }
   
   /* Legend Div Styling */
