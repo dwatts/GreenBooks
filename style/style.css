@@ -839,7 +839,7 @@ input#toggle:checked ~ .toggle > span:nth-child(3){
   }
 
   .menu {
-    width: calc(100% - 50px);
+    width: calc(100% - 40px) !important;
     position: fixed !important;
     padding: 15px 25px 15px 25px;
     z-index: 4 !important;
