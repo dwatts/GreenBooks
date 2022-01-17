@@ -248,7 +248,7 @@ li.legend2:nth-child(6):before {
   width: 30em;
   position: fixed;
   z-index: 1;
-  height: 75%;
+  height: calc(100% - 190px);
   top: 120px;
   right: -33.3em;
   background-color: rgba(255, 255, 255, 0.9);
